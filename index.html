@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Snack Game</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" href="img/snake-game.ico" type="image/x-icon">
+</head>
+<body>
+	<div class="header">
+		<h1>JOGO DA COBRINHA</h1>
+		<img class="icon-snake" src="img/icone-cobrinha.png" alt="Icon Snake">
+	</div>
+
+	<h3 class="score disabled">Minha Pontuação : 0</h3>
+	<button type="button" class="start">COMEÇAR JOGO</button>
+
+	<canvas id="snake" class="disabled" width="512" height="512"></canvas>
+
+	<div class="game-over disabled">
+		<h2>GAME OVER</h2>
+		<h3 class="last-score">Sua Pontuação foi de ?</h3>
+		<h3>Você consegue fazer melhor!</h3>
+		<button type="button" class="restart">Reiniciar Jogo</button>
+	</div>
+
+	<div class="you-win disabled">
+		<h2>VOCÊ VENCEU!</h2>
+		<h3 class="last-score">Sua Pontuação foi a máxima de 225</h3>
+		<button type="button" class="restart">Novo Jogo</button>
+	</div>
+
+	<div class="controllers-mobile">
+		<div>
+			<button type="button" class="btn-control" id="up" onclick="update(38)">
+				<img src="img/seta.png" alt="Up Arrow">
+			</button>
+		</div>
+
+		<button type="button" class="btn-control" id="left" onclick="update(37)">
+			<img src="img/seta.png" alt="Left Arrow">
+		</button>
+
+		<button type="button" class="btn-control" id="down" onclick="update(40)">
+			<img src="img/seta.png" alt="Down Arrow">
+		</button>
+
+		<button type="button" class="btn-control" id="right" onclick="update(39)">
+			<img src="img/seta.png" alt="Right Arrow">
+		</button>
+	</div>
+
+	<script defer src="script.js"></script>
+</body>
+</html>
